@@ -1,7 +1,3 @@
-Here’s a well-structured **README.md** draft for your project that explains what the script does, how to set it up, and how to use it:
-
----
-
 # 🔗 Hotkey Shortcut Launcher
 
 This project allows you to **bind custom keyboard shortcuts** to launch applications or open websites. It uses a simple JSON configuration file to define hotkeys and their associated commands/paths.
