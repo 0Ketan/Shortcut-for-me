@@ -1,0 +1,54 @@
+{
+    "shortcuts": [
+        {
+            "hotkey": "ctrl+alt+c",
+            "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+            "desc": "Chrome"
+        },  
+        {
+            "hotkey": "ctrl+alt+v",
+            "path": "C:\\Users\\LENOVO\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe",
+            "desc": "VS Code"
+        },
+        {
+            "hotkey": "ctrl+alt+y",
+            "path": "https://www.youtube.com",
+            "desc": "YouTube"
+        },
+        {
+            "hotkey": "ctrl+alt+i",
+            "path": "https://www.instagram.com",
+            "desc": "Instagram"
+        },
+        {
+            "hotkey": "ctrl+alt+f",
+            "path": "explorer.exe",
+            "desc": "File Explorer"
+        },
+        {
+            "hotkey": "ctrl+alt+m",
+            "path": "C:\\Program Files (x86)\\MSI Afterburner\\MSIAfterburner.exe",
+            "desc": "MSI Afterburner"
+        },
+        {
+            "hotkey": "ctrl+alt+q",
+            "path": "C:\\Users\\LENOVO\\AppData\\Local\\Programs\\Qoder\\Qoder.exe",
+            "desc": "Qoder"
+        },
+        {
+            "hotkey": "ctrl+alt+p",
+            "path": "C:\\Program Files\\ProtonVPN\\ProtonVPN.exe",
+            "desc": "Proton VPN"
+        },
+        {
+            "hotkey": "ctrl+alt+x",
+            "path": "\"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe\" --incognito https://xhamster.com/",
+            "desc": "Google Incognito"
+        },
+        {
+            "hotkey": "ctrl+alt+c",
+            "path": "https://chatgpt.com/",
+            "desc": "Chat GPT"
+        }
+    ]
+}
