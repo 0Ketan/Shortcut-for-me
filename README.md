@@ -42,18 +42,18 @@ cd hotkey-launcher
 ### 2. Create/Edit `shortcuts.json`
 Define your shortcuts in the following format:
 ```json
-{
-  "shortcuts": [
-    {
-      "hotkey": "ctrl+alt+c",
-      "path": "calc.exe"
-    },
-    {
-      "hotkey": "ctrl+alt+w",
-      "path": "https://www.google.com"
-    }
-  ]
-}
+"shortcuts": [
+        {
+            "hotkey": "ctrl+alt+c",
+            "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+            "desc": "Chrome"
+        },  
+        {
+            "hotkey": "ctrl+alt+v",
+            "path": "C:\\Users\\LENOVO\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe",
+            "desc": "VS Code"
+        }
+]
 ```
 
 - `hotkey`: The keyboard combination (e.g., `ctrl+alt+c`)
