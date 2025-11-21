@@ -22,4 +22,5 @@ with open(CONFIG_PATH, "r") as f:
 for item in shortcuts:
     bind_hotkeys(item["hotkey"], item["path"])
 
+
 keyboard.wait()
