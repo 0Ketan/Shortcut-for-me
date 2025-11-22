@@ -17,7 +17,8 @@ def bind_hotkeys(hotkey, command):
     keyboard.add_hotkey(hotkey, lambda: launch_application(command))
 
 with open(CONFIG_PATH, "r") as f:
-    shortcuts = json.load(f)["shortcuts"]
+    data = json.load(f)
+    shortcuts = data["shortcuts_apps"]  + data["shortcuts_websites"]
 
 for item in shortcuts:
     bind_hotkeys(item["hotkey"], item["path"])

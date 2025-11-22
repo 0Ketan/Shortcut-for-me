@@ -1,5 +1,5 @@
 {
-    "shortcuts": [
+    "apps": [
         {
             "hotkey": "ctrl+alt+c",
             "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
@@ -9,16 +9,6 @@
             "hotkey": "ctrl+alt+v",
             "path": "C:\\Users\\LENOVO\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe",
             "desc": "VS Code"
-        },
-        {
-            "hotkey": "ctrl+alt+y",
-            "path": "https://www.youtube.com",
-            "desc": "YouTube"
-        },
-        {
-            "hotkey": "ctrl+alt+i",
-            "path": "https://www.instagram.com",
-            "desc": "Instagram"
         },
         {
             "hotkey": "ctrl+alt+f",
@@ -39,6 +29,25 @@
             "hotkey": "ctrl+alt+p",
             "path": "C:\\Program Files\\ProtonVPN\\ProtonVPN.exe",
             "desc": "Proton VPN"
+        }
+        
+        
+    ],
+    "websites": [
+        {
+            "hotkey": "ctrl+alt+y",
+            "path": "https://www.youtube.com",
+            "desc": "YouTube"
+        },
+        {
+            "hotkey": "ctrl+alt+g",
+            "path": "https://www.github.com",
+            "desc": "GitHub"
+        },
+        {
+            "hotkey": "ctrl+alt+i",
+            "path": "https://www.instagram.com",
+            "desc": "Instagram"
         },
         {
             "hotkey": "ctrl+alt+x",
@@ -50,5 +59,6 @@
             "path": "https://chatgpt.com/",
             "desc": "Chat GPT"
         }
+
     ]
 }
