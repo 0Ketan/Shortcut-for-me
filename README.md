@@ -1,92 +1,191 @@
-# 🔗 Hotkey Shortcut Launcher
+---
 
-This project allows you to **bind custom keyboard shortcuts** to launch applications or open websites. It uses a simple JSON configuration file to define hotkeys and their associated commands/paths.
+# 📘 Shortcut-For-Me
+
+A lightweight global-hotkey launcher with **dual modes** (Apps / Websites), plus **native Windows 11 toast notifications**.
+Built with Python and works perfectly with **Python 3.14**.
 
 ---
 
-## 📌 Features
-- Bind any keyboard shortcut to:
-  - Launch local applications
-  - Open websites in your default browser
-- Configuration stored in a JSON file (`shortcuts.json`)
-- Lightweight and easy to customize
+## 🚀 Features
+
+### ✅ Dual-Mode System
+
+Easily toggle between two modes:
+
+* **App Mode** → Hotkeys launch installed applications
+* **Website Mode** → Same hotkeys open websites
+* Mode is switched instantly using
+  **`CTRL + ALT + SPACE`**
+
+### 🔥 Single Hotkey for Multiple Actions
+
+The **same hotkey** can launch:
+
+* Chrome.exe (App mode)
+* youtube.com (Website mode)
+
+Depending on which mode is active.
+
+### 🔔 Windows 11 Notifications
+
+Uses native **PowerShell-based toast notifications**, fully compatible with Python 3.14 (win10toast/winotify don’t work).
+
+You receive a popup when:
+
+* Mode switches to **APPS**
+* Mode switches to **WEBSITES**
+
+### ⚡ Fast & Optimized for Startup
+
+* Lightweight
+* Runs silently in background
+* One-time hotkey binding
+* Reads a simple JSON shortcut list
 
 ---
 
-## 📂 Project Structure
+## 📁 Project Structure
+
 ```
-.
-├── shortcuts.json   # Configuration file with hotkeys and paths
-├── launcher.py      # Main script
+Shortcut-for-me/
+│
+├── main.py               # Main Python script
+├── shortcuts.json        # App & website shortcuts
+└── README.md             # This file
 ```
 
 ---
 
-## ⚙️ Requirements
-- Python 3.x
-- Required libraries:
-  ```bash
-  pip install keyboard
-  ```
+## 🛠 Requirements
+
+### Windows:
+
+* Windows 10 or 11
+* PowerShell enabled (default)
+
+### Python:
+
+* Python **3.14**
+* Required packages:
+
+  * `keyboard`
+
+Install:
+
+```
+pip install keyboard
+```
 
 ---
 
-## 🛠️ Usage
+## 📄 JSON Format (shortcuts.json)
 
-### 1. Clone or download the repository
-```bash
-git clone https://github.com/your-username/hotkey-launcher.git
-cd hotkey-launcher
-```
+Your JSON must contain two lists:
 
-### 2. Create/Edit `shortcuts.json`
-Define your shortcuts in the following format:
 ```json
-"shortcuts": [
-        {
-            "hotkey": "ctrl+alt+c",
-            "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
-            "desc": "Chrome"
-        },  
-        {
-            "hotkey": "ctrl+alt+v",
-            "path": "C:\\Users\\LENOVO\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe",
-            "desc": "VS Code"
-        }
-]
+{
+  "apps": [
+    {
+      "hotkey": "ctrl+alt+c",
+      "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "desc": "Chrome"
+    }
+  ],
+
+  "websites": [
+    {
+      "hotkey": "ctrl+alt+c",
+      "path": "https://www.youtube.com",
+      "desc": "YouTube"
+    }
+  ]
+}
 ```
 
-- `hotkey`: The keyboard combination (e.g., `ctrl+alt+c`)
-- `path`: Either:
-  - Application name/path (e.g., `calc.exe`, `/usr/bin/firefox`)
-  - Website URL (e.g., `https://www.google.com`)
+Hotkeys **can be the same** for apps and websites.
 
-### 3. Run the script
-```bash
-python launcher.py
+---
+
+## ⚙ How the Program Works
+
+### 1️⃣ Load Shortcuts
+
+All app & website shortcuts are loaded from `shortcuts.json`.
+
+### 2️⃣ Bind Hotkeys
+
+Every hotkey is bound **once**.
+
+When triggered, it calls:
+
+```py
+run_action(hotkey)
 ```
 
-The script will:
-- Load all shortcuts from `shortcuts.json`
-- Bind them to your keyboard
-- Wait for you to press the hotkeys
+### 3️⃣ Mode Switching
+
+Press:
+
+```
+CTRL + ALT + SPACE
+```
+
+to toggle between:
+
+```
+apps  <→>  websites
+```
+
+### 4️⃣ Execute Action
+
+If in app mode → run EXE
+If in website mode → open URL
 
 ---
 
-## 🚀 Example
-- Press `Ctrl + Alt + C` → Opens Calculator  
-- Press `Ctrl + Alt + W` → Opens Google in your browser  
+## 🔔 Notifications
+
+A small toast shows:
+
+```
+Mode Changed
+Switched to WEBSITE Mode
+```
+
+or
+
+```
+Mode Changed
+Switched to APPS Mode
+```
+
+This uses native PowerShell toast API (works on Python 3.14).
 
 ---
 
-## ⚠️ Notes
-- Running this script may require **administrator/root privileges** depending on your OS.
-- The `keyboard` library may not work in all environments (e.g., some Linux desktops without root).
-- Be careful when binding global hotkeys to avoid conflicts with system shortcuts.
+## ▶ Running the Script
+
+Simply execute:
+
+```
+python main.py
+```
+
+To run it **every startup**, place a shortcut to `main.py` in:
+
+```
+shell:startup
+```
 
 ---
 
-## 📜 License
-This project is open-source. Feel free to modify and use it in your own workflows.
+## 💡 Future Improvements (optional)
+
+* UI for managing shortcuts (Tkinter)
+* Import/export profiles
+* Add sound notifications
+* Auto-reload JSON without restarting app
+* Tray icon with menu
 
 ---
