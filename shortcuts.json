@@ -29,6 +29,11 @@
             "hotkey": "ctrl+alt+p",
             "path": "C:\\Program Files\\ProtonVPN\\ProtonVPN.exe",
             "desc": "Proton VPN"
+        },
+        {
+            "hotkey": "ctrl+alt+x",
+            "path": "\"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe\" --incognito https://xhamster.com/",
+            "desc": "Google Incognito"
         }
         
         
@@ -48,11 +53,6 @@
             "hotkey": "ctrl+alt+i",
             "path": "https://www.instagram.com",
             "desc": "Instagram"
-        },
-        {
-            "hotkey": "ctrl+alt+x",
-            "path": "\"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe\" --incognito https://xhamster.com/",
-            "desc": "Google Incognito"
         },
         {
             "hotkey": "ctrl+alt+c",
